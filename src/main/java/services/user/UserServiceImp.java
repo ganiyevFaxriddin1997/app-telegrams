@@ -1,5 +1,7 @@
 package services.user;
 
+import dto.response.UserResponseDto;
+
 import java.util.List;
 
 public class UserServiceImp implements UserService {
@@ -40,6 +42,11 @@ public class UserServiceImp implements UserService {
 
     @Override
     public Object getEntity(Object id) {
+        return null;
+    }
+
+    @Override
+    public UserResponseDto getUser(String phoneNumber) {
         return null;
     }
 }

@@ -1,6 +1,9 @@
 package services.message;
 
+import dto.response.MessageStatusResponseDto;
+
 import java.util.List;
+import java.util.UUID;
 
 public class MessageStatusServiceImp implements MessageStatusService{
     @Override
@@ -40,6 +43,11 @@ public class MessageStatusServiceImp implements MessageStatusService{
 
     @Override
     public Object getEntity(Object id) {
+        return null;
+    }
+
+    @Override
+    public MessageStatusResponseDto getMessage(UUID userId, UUID postId) {
         return null;
     }
 }

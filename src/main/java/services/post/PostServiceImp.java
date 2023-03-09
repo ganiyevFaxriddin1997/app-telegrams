@@ -1,6 +1,9 @@
 package services.post;
 
+import dto.response.PostResponseDto;
+
 import java.util.List;
+import java.util.UUID;
 
 public class PostServiceImp implements PostService{
     @Override
@@ -40,6 +43,11 @@ public class PostServiceImp implements PostService{
 
     @Override
     public Object getEntity(Object id) {
+        return null;
+    }
+
+    @Override
+    public PostResponseDto getPost(UUID channelId, UUID userId) {
         return null;
     }
 }

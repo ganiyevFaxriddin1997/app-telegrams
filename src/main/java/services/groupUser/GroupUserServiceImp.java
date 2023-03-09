@@ -1,5 +1,6 @@
 package services.groupUser;
 
+import dto.response.GroupResponseDto;
 import services.group.GroupService;
 
 import java.util.List;
@@ -42,6 +43,11 @@ public class GroupUserServiceImp implements GroupUserService {
 
     @Override
     public Object getEntity(Object id) {
+        return null;
+    }
+
+    @Override
+    public GroupResponseDto getGroup(String link) {
         return null;
     }
 }
