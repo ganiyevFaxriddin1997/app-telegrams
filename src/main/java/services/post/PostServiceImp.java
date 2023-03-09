@@ -1,8 +1,8 @@
-package services.user;
+package services.post;
 
 import java.util.List;
 
-public class UserServiceImp implements UserService {
+public class PostServiceImp implements PostService{
     @Override
     public boolean create(Object o) {
         return false;

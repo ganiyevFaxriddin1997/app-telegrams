@@ -1,4 +1,6 @@
 package services.chat;
 
-public interface ChatService {
+import services.BaseService;
+
+public interface ChatService extends BaseService {
 }

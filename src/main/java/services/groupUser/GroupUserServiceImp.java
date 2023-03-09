@@ -1,8 +1,10 @@
-package services.user;
+package services.groupUser;
+
+import services.group.GroupService;
 
 import java.util.List;
 
-public class UserServiceImp implements UserService {
+public class GroupUserServiceImp implements GroupUserService {
     @Override
     public boolean create(Object o) {
         return false;

@@ -1,8 +1,8 @@
-package services.user;
+package services.message;
 
 import java.util.List;
 
-public class UserServiceImp implements UserService {
+public class MessageStatusServiceImp implements MessageStatusService{
     @Override
     public boolean create(Object o) {
         return false;

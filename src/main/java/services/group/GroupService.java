@@ -1,4 +1,6 @@
 package services.group;
 
-public interface GroupService {
+import services.BaseService;
+
+public interface GroupService extends BaseService {
 }

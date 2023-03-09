@@ -1,8 +1,8 @@
-package services.user;
+package services.channelUser;
 
 import java.util.List;
 
-public class UserServiceImp implements UserService {
+public class ChannelUserServiceImp implements ChannelUserService{
     @Override
     public boolean create(Object o) {
         return false;

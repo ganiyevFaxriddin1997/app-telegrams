@@ -1,4 +1,6 @@
 package services.user;
 
-public interface UserService {
+import services.BaseService;
+
+public interface UserService extends BaseService {
 }
