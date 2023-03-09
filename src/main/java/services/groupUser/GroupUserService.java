@@ -1,8 +1,14 @@
 package services.groupUser;
 
+import dto.request.GroupUserRequestDto;
 import dto.response.GroupResponseDto;
+import dto.response.GroupUserResponseDto;
+import models.groupUser.GroupUser;
 import services.BaseService;
 
-public interface GroupUserService extends BaseService {
+import java.util.UUID;
+
+public interface GroupUserService extends
+        BaseService<GroupUserRequestDto, UUID, GroupUserResponseDto, GroupUser> {
     GroupResponseDto getGroup(String link);
 }

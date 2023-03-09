@@ -1,45 +1,51 @@
 package services.group;
 
+import dto.request.GroupRequestDto;
+import dto.response.GroupResponseDto;
+import models.group.Group;
+
 import java.util.List;
+import java.util.UUID;
 
-public class GroupServiceImp implements GroupService{
+public class GroupServiceImp implements GroupService {
+
     @Override
-    public boolean create(Object o) {
+    public boolean create(GroupRequestDto groupRequestDto) {
         return false;
     }
 
     @Override
-    public Object get(Object id) {
+    public GroupResponseDto get(UUID id) {
         return null;
     }
 
     @Override
-    public List getList() {
+    public List<GroupResponseDto> getList() {
         return null;
     }
 
     @Override
-    public boolean delete(Object id) {
+    public boolean delete(UUID id) {
         return false;
     }
 
     @Override
-    public boolean update(Object id, Object o) {
+    public boolean update(UUID id, GroupRequestDto groupRequestDto) {
         return false;
     }
 
     @Override
-    public List getData() {
+    public List<Group> getData() {
         return null;
     }
 
     @Override
-    public boolean writeData(List data) {
+    public boolean writeData(List<Group> data) {
         return false;
     }
 
     @Override
-    public Object getEntity(Object id) {
+    public Group getEntity(UUID id) {
         return null;
     }
 }

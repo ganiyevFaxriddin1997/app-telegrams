@@ -10,7 +10,7 @@ import java.util.List;
  * @param <E> ObjectEntity
  */
 
-public interface BaseService<T, R, I, E> {
+public interface BaseService<T, I, R, E> {
 
 
     boolean create (T t);

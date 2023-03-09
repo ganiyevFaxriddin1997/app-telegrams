@@ -1,48 +1,51 @@
 package services.post;
 
+import dto.request.PostRequestDto;
 import dto.response.PostResponseDto;
+import models.post.Post;
 
 import java.util.List;
 import java.util.UUID;
 
-public class PostServiceImp implements PostService{
+public class PostServiceImp implements PostService {
+
     @Override
-    public boolean create(Object o) {
+    public boolean create(PostRequestDto postRequestDto) {
         return false;
     }
 
     @Override
-    public Object get(Object id) {
+    public PostResponseDto get(UUID id) {
         return null;
     }
 
     @Override
-    public List getList() {
+    public List<PostResponseDto> getList() {
         return null;
     }
 
     @Override
-    public boolean delete(Object id) {
+    public boolean delete(UUID id) {
         return false;
     }
 
     @Override
-    public boolean update(Object id, Object o) {
+    public boolean update(UUID id, PostRequestDto postRequestDto) {
         return false;
     }
 
     @Override
-    public List getData() {
+    public List<Post> getData() {
         return null;
     }
 
     @Override
-    public boolean writeData(List data) {
+    public boolean writeData(List<Post> data) {
         return false;
     }
 
     @Override
-    public Object getEntity(Object id) {
+    public Post getEntity(UUID id) {
         return null;
     }
 
