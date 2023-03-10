@@ -1,13 +1,20 @@
 package services.group;
 
+import com.google.gson.Gson;
 import dto.request.GroupRequestDto;
 import dto.response.GroupResponseDto;
 import models.group.Group;
+import org.modelmapper.ModelMapper;
 
+import java.io.File;
 import java.util.List;
 import java.util.UUID;
 
 public class GroupServiceImp implements GroupService {
+
+    static ModelMapper modelMapper = new ModelMapper();
+    static Gson gson;
+    static File file;
 
     @Override
     public boolean create(GroupRequestDto groupRequestDto) {
@@ -36,6 +43,7 @@ public class GroupServiceImp implements GroupService {
 
     @Override
     public List<Group> getData() {
+
         return null;
     }
 
