@@ -1,4 +1,4 @@
-package com.dev.models;
+package models;
 
 public class BaseModel {
 }

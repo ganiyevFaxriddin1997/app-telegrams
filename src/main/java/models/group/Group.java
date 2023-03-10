@@ -1,4 +1,4 @@
-package com.dev.models.group;
+package models.group;
 
 public class Group {
     //Shu yer uzgargan!
