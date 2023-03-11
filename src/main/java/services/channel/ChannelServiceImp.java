@@ -22,7 +22,7 @@ public class ChannelServiceImp implements ChannelService {
     @Override
     public boolean create(ChannelRequestDto channelRequestDto) {
 
-        if (channelRequestDto.getLink() != null) {
+        if (channelRequestDto.getLink() != null && channelRequestDto.getUsersId() != null) {
             List<Channel> data = getData();
 
             if (data == null) {
@@ -36,6 +36,15 @@ public class ChannelServiceImp implements ChannelService {
 
     @Override
     public ChannelResponseDto get(UUID id) {
+        List<Channel> data = getData();
+        if (data != null) {
+            for (Channel channel : data) {
+                if (channel.getId().equals(id)) {
+                    modelMapper.map(channel, ChannelRequestDto.class);
+
+                }
+            }
+        }
         return null;
     }
 
