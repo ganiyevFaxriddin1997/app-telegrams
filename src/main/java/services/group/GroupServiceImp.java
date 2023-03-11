@@ -23,8 +23,6 @@ import java.util.UUID;
 public class GroupServiceImp implements GroupService {
     static final PostService postService = new PostServiceImp();
     static ModelMapper modelmapper = new ModelMapper();
-    static Gson gson;
-    static File file;
 
     @Override
     public boolean create(GroupRequestDto groupRequestDto) {

@@ -20,5 +20,4 @@ public class Channel extends BaseModel {
     private String link;
     private List<Post> posts;
     private String name;
-    private List<User> users;
 }

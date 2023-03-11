@@ -8,7 +8,7 @@ import java.util.UUID;
 @AllArgsConstructor@NoArgsConstructor@Getter@Setter@Builder
 public class GroupRequestDto {
 
-    private List<UUID> postsId;
+    private List<UUID> messages;
     private String link;
     private String name;
     private String photo;

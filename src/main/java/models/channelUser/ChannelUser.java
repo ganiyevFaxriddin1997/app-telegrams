@@ -1,5 +1,6 @@
 package models.channelUser;
 
+import enums.Role;
 import lombok.*;
 import models.BaseModel;
 
@@ -11,6 +12,7 @@ import java.util.UUID;
 @Setter
 @Builder
 public class ChannelUser extends BaseModel {
+    private Role role;
     private UUID userId;
     private UUID channelId;
 }

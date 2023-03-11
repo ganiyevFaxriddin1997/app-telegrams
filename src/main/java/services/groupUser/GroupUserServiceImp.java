@@ -13,6 +13,9 @@ public class GroupUserServiceImp implements GroupUserService {
 
     @Override
     public boolean create(GroupUserRequestDto groupUserRequestDto) {
+        if (groupUserRequestDto != null) {
+
+        }
         return false;
     }
 
