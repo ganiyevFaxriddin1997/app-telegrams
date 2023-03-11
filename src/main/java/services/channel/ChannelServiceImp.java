@@ -10,6 +10,7 @@ import org.modelmapper.ModelMapper;
 
 import java.io.*;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -20,6 +21,16 @@ public class ChannelServiceImp implements ChannelService {
     static File file;
     @Override
     public boolean create(ChannelRequestDto channelRequestDto) {
+
+        if (channelRequestDto.getLink() != null) {
+            List<Channel> data = getData();
+
+            if (data == null) {
+                data = new ArrayList<>();
+            }
+            data.add(modelMapper.map(channelRequestDto, Channel.class));
+            writeData(data);
+        }
         return false;
     }
 

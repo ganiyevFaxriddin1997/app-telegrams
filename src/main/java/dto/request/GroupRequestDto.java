@@ -1,19 +1,14 @@
 package dto.request;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import models.post.Post;
 
 import java.util.List;
 import java.util.UUID;
-@AllArgsConstructor
-@NoArgsConstructor
-@Getter
-@Setter
+@AllArgsConstructor@NoArgsConstructor@Getter@Setter@Builder
 public class GroupRequestDto {
-    private List<UUID> messages;
+
+    private List<UUID> postsId;
     private String link;
     private String name;
     private String photo;
