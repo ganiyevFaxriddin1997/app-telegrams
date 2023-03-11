@@ -10,5 +10,5 @@ import java.util.UUID;
 
 public interface GroupUserService extends
         BaseService<GroupUserRequestDto, UUID, GroupUserResponseDto, GroupUser> {
-    GroupResponseDto getGroup(String link);
+
 }
