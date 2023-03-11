@@ -7,7 +7,10 @@ import lombok.Setter;
 
 import java.util.Date;
 import java.util.UUID;
-@AllArgsConstructor@NoArgsConstructor@Getter@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public abstract class BaseModel {
 
     private UUID Id = UUID.randomUUID();

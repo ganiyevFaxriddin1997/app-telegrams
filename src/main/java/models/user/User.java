@@ -2,6 +2,7 @@ package models.user;
 
 import enums.Role;
 import lombok.*;
+import models.BaseModel;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -9,7 +10,7 @@ import lombok.*;
 @Setter
 @Builder
 @ToString
-public class User {
+public class User extends BaseModel {
     private String name;
     private String lastName;
     private String Password;

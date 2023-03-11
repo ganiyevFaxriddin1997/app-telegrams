@@ -13,7 +13,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.UUID;
 
-public class ChannelServiceImp implements ChannelService{
+public class ChannelServiceImp implements ChannelService {
 
     static ModelMapper modelMapper = new ModelMapper();
     static Gson gson;
