@@ -9,4 +9,6 @@ import java.util.UUID;
 
 public interface GroupService extends BaseService<GroupRequestDto, UUID, GroupResponseDto, Group> {
 
+
+
 }

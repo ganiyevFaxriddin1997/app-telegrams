@@ -22,7 +22,7 @@ public class ChannelServiceImp implements ChannelService {
     @Override
     public boolean create(ChannelRequestDto channelRequestDto) {
 
-        if (channelRequestDto.getLink() != null && channelRequestDto.getUsersId() != null) {
+        if (channelRequestDto.getLink() != null) {
             List<Channel> data = getData();
 
             if (data == null) {
@@ -30,6 +30,7 @@ public class ChannelServiceImp implements ChannelService {
             }
             data.add(modelMapper.map(channelRequestDto, Channel.class));
             writeData(data);
+            return true;
         }
         return false;
     }
@@ -50,6 +51,14 @@ public class ChannelServiceImp implements ChannelService {
 
     @Override
     public List<ChannelResponseDto> getList() {
+        List<Channel> data = getData();
+        if (data != null) {
+            List<ChannelResponseDto> channelResponseDto = new ArrayList<>();
+            for (Channel channel : data) {
+                channelResponseDto.add(modelMapper.map(channel,ChannelResponseDto.class));
+            }
+            return channelResponseDto;
+        }
         return null;
     }
 
@@ -74,6 +83,17 @@ public class ChannelServiceImp implements ChannelService {
 
     @Override
     public boolean update(UUID id, ChannelRequestDto channelRequestDto) {
+        List<Channel> data = getData();
+        if (data != null) {
+            for (Channel channel : data) {
+                if (channel.getId().equals(id)) {
+                    data.add(modelMapper.map(channelRequestDto, Channel.class));
+                    boolean remove = data.remove(channel);
+                    writeData(data);
+                    return true;
+                }
+            }
+        }
         return false;
     }
 

@@ -10,6 +10,7 @@ import org.modelmapper.ModelMapper;
 
 import java.io.*;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -21,16 +22,41 @@ public class ChatServiceImp implements ChatService {
 
     @Override
     public boolean create(ChatRequestDto chatRequestDto) {
+        if (chatRequestDto != null) {
+            List<Chat> data = getData();
+            if (data != null) {
+                data = new ArrayList<>();
+            }
+            data.add(modelMapper.map(chatRequestDto, Chat.class));
+            writeData(data);
+            return true;
+        }
         return false;
     }
 
     @Override
     public ChatResponseDto get(UUID id) {
+        List<Chat> data = getData();
+        if (data != null) {
+            for (Chat chat : data) {
+                if (chat.getId().equals(id)) {
+                    return modelMapper.map(chat, ChatResponseDto.class);
+                }
+            }
+        }
         return null;
     }
 
     @Override
     public List<ChatResponseDto> getList() {
+        List<Chat> data = getData();
+        if (data != null) {
+            List<ChatResponseDto> chatResponseDto = new ArrayList<>();
+            for (Chat chat : data) {
+                chatResponseDto.add(modelMapper.map(chat, ChatResponseDto.class));
+            }
+            return chatResponseDto;
+        }
         return null;
     }
 
@@ -55,6 +81,17 @@ public class ChatServiceImp implements ChatService {
 
     @Override
     public boolean update(UUID id, ChatRequestDto chatRequestDto) {
+        List<Chat> data = getData();
+        if (data != null) {
+            for (Chat chat : data) {
+                if (chat.getId().equals(id)) {
+                    data.add(modelMapper.map(chatRequestDto, Chat.class));
+                    data.remove(chat);
+                    writeData(data);
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
